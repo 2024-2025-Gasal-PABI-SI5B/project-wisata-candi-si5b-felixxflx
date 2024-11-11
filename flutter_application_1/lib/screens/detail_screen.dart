@@ -9,116 +9,167 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          // detail header
-          // img utamaa
-          Stack(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    candi.imageAsset,
-                    width: double.infinity,
-                    height: 300,
-                    fit: BoxFit.cover,
+              // detail header
+              // img utamaa
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        candi.imageAsset,
+                        width: double.infinity,
+                        height: 300,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                ),
+                  // tombol back
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.deepPurple[100]?.withOpacity(0.8),
+                          shape: BoxShape.circle),
+                      child: IconButton(
+                          onPressed: () {}, icon: const Icon(Icons.arrow_back)),
+                    ),
+                  ),
+                ],
               ),
-              // tombol back
+
+              // Detail Info
               Padding(
-                padding: const EdgeInsets.all(16),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.deepPurple[100]?.withOpacity(0.8),
-                      shape: BoxShape.circle),
-                  child: IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.arrow_back)),
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // info atas
+                  children: [
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          candi.name,
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        IconButton(
+                            onPressed: () {}, icon: Icon(Icons.favorite_border))
+                      ],
+                    ),
+                    // info tengah
+                    // info bawah
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.place,
+                          color: Colors.red,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        SizedBox(
+                          width: 70,
+                          child: Text(
+                            'Lokasi',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Text(': ${candi.location}')
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.house,
+                          color: Colors.red,
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        const SizedBox(
+                          width: 70,
+                          child: Text(
+                            'Lokasi',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Text(': ${candi.type}')
+                      ],
+                    ),
+                    // pemisah
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Divider(
+                      color: Colors.deepPurple.shade100,
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+
+                    // info bawah
+                    const Text(
+                      'Deskripsi',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      candi.description,
+                    )
+                  ],
                 ),
               ),
+
+              // Detail Gallery
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Divider(
+                      color: Colors.deepPurple,
+                    ),
+                    Text(''),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    SizedBox(),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      'GALERI',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text('')
+                  ],
+                ),
+              )
             ],
           ),
-
-          // Detail Info
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              // info atas
-              children: [
-                SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      candi.name,
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    IconButton(
-                        onPressed: () {}, icon: Icon(Icons.favorite_border))
-                  ],
-                ),
-                // info tengah
-                // info bawah
-                const SizedBox(
-                  height: 16,
-                ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.place,
-                      color: Colors.red,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    SizedBox(
-                      width: 70,
-                      child: Text(
-                        'Lokasi',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Text(': ${candi.location}')
-                  ],
-                ),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.house,
-                      color: Colors.red,
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    const SizedBox(
-                      width: 70,
-                      child: Text(
-                        'Lokasi',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Text(': ${candi.type}')
-                  ],
-                ),
-                // pemisah
-                SizedBox(
-                  height: 16,
-                ),
-                Divider(
-                  color: Colors.deepPurple.shade100,
-                ),
-                const SizedBox(
-                  height: 16,
-                )
-              ],
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
