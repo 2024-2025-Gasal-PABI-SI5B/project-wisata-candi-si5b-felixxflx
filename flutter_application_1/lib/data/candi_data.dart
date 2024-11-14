@@ -54,7 +54,7 @@ final List<Candi> candiList = [
     description:
         "Candi Plaosan adalah candi kembar yang terdiri dari Plaosan Lor dan Plaosan Kidul, dengan arsitektur Buddha dan Hindu.",
     gallery: [
-      "images/ijo.jpeg",
+      "images/plaosan.jpeg",
     ],
   ),
   Candi(

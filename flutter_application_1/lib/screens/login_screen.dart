@@ -14,6 +14,13 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController _usernameController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
 
+  Future<void> _saveLoginTime() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    DateTime now = DateTime.now();
+    await prefs.setString(
+        'loginTime', now.toIso8601String()); // Simpan waktu login
+  }
+
   Future<void> _login() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String username = _usernameController.text;
@@ -21,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (username == prefs.getString('username') &&
         password == prefs.getString('password')) {
+      await _saveLoginTime();
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen()),
