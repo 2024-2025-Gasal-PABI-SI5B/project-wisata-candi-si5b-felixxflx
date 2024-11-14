@@ -10,7 +10,7 @@ final List<Candi> candiList = [
     description:
         "Candi Borobudur adalah candi Buddha terbesar di dunia dan merupakan salah satu monumen Buddha terbesar yang ada di dunia.",
     gallery: [
-      "images/borobudur",
+      "images/borobudur.jpeg",
     ],
   ),
   Candi(
@@ -21,7 +21,7 @@ final List<Candi> candiList = [
     description:
         "Candi Prambanan adalah candi Hindu terbesar di Indonesia yang didedikasikan untuk Trimurti: Brahma, Wisnu, dan Siwa.",
     gallery: [
-      "images/prambanan.jpg",
+      "images/prambanan.jpeg",
     ],
   ),
   Candi(
@@ -32,7 +32,7 @@ final List<Candi> candiList = [
     description:
         "Candi Mendut adalah candi Buddha yang terletak di Magelang, memiliki arca Buddha besar di dalamnya.",
     gallery: [
-      "images/mendut.jpg",
+      "images/mendut.jpeg",
     ],
   ),
   Candi(
@@ -43,7 +43,7 @@ final List<Candi> candiList = [
     description:
         "Candi Sewu adalah candi Buddha yang merupakan bagian dari Kompleks Prambanan dengan jumlah candi sekitar 249 buah.",
     gallery: [
-      "images/sewu.jpg",
+      "images/sewu.jpeg",
     ],
   ),
   Candi(
@@ -54,7 +54,7 @@ final List<Candi> candiList = [
     description:
         "Candi Plaosan adalah candi kembar yang terdiri dari Plaosan Lor dan Plaosan Kidul, dengan arsitektur Buddha dan Hindu.",
     gallery: [
-      "images/ijo.jpg",
+      "images/ijo.jpeg",
     ],
   ),
   Candi(
@@ -65,7 +65,7 @@ final List<Candi> candiList = [
     description:
         "Candi Kalasan adalah candi Buddha tertua di Yogyakarta, dibangun untuk memuliakan dewi Tara.",
     gallery: [
-      "images/kalasan.jpg",
+      "images/kalasan.jpeg",
     ],
   ),
   Candi(
@@ -76,18 +76,18 @@ final List<Candi> candiList = [
     description:
         "Candi Sari adalah candi Buddha yang merupakan bagian dari candi vihara dan tempat tinggal para bhiksu.",
     gallery: [
-      "images/pawon.jpg",
+      "images/sari.jpeg",
     ],
   ),
   Candi(
-    name: "Candi Ratu Boko",
+    name: "Candi Singosari",
     location: "Sleman, Yogyakarta",
     builtIn: "Abad ke-8",
     type: "Keraton",
     description:
         "Candi Ratu Boko adalah kompleks keraton dengan pemandangan yang indah, diyakini sebagai tempat pertapaan dan istana.",
     gallery: [
-      "images/ratu_boko.jpg",
+      "images/singosari.jpeg",
     ],
   ),
 ];
